@@ -1,92 +1,160 @@
+import React from "react"
 export default function Skills() {
-  return (
-    <section className="skills section-container">
-      <h2>Skills</h2>
-      <div class="skill-category">
-        <div className="skill-header">
-          <div className="icon-container design-icon">
-            <img src="/svg/pallette.svg" alt="" />
-          </div>
-          <h4>Design</h4>
-        </div>
+    const skillsData = [
+        {
+            category: "Languages",
+            icon: "/svg/code.svg",
+            iconClass: "development-icon",
+            rows: [
+                [
+                    ["Python"], ["CUDA"], ["C", "C++"],
+                ],
+                [
+                    ["Java"],
+                    ["HTML", "CSS", "JavaScript"],[ "SQL"],
+                ],
+            ],
+        },
+        {
+            category: "Frameworks & Libraries",
+            icon: "/svg/code.svg",
+            iconClass: "development-icon",
+            rows: [
+                [
+                    ["React", "Redux", "Vue"],
+                    ["Django", "FastAPI"],
+                ],
+                [
+                    ["PyTorch", "TensorFlow", "Scikit-learn"],
+                ],
+                [
+                    ["ONNX", "OpenCV", "Open3D"],
+                ],
+                [
+                    ["LangChain", "Unstructured"],
+                ],
+            ],
+        },
+        {
+            category: "Cloud & DevOps",
+            icon: "/svg/cloud.svg",
+            iconClass: "development-icon",
+            rows: [
+                [
+                    ["AWS", "Microsoft Azure"],
+                    ["Docker", "Kubernetes"],
+                ],
+                [
+                    ["Git", "CI/CD"],
+                    ["Huggingface Spaces"],
+                ],
+                [
+                    ["MySQL", "PostgreSQL"],
+                ],
+            ],
+        },
+        {
+            category: "Tools & Methodologies",
+            icon: "/svg/tools.svg",
+            iconClass: "design-icon",
+            rows: [
+                [
+                    ["Computer Vision", "Data Annotation"],
+                    ["RAG", "Agile"],
+                ],
+                [
+                    ["3D Reconstruction", "Point Cloud Processing"],
+                ],
+                [
+                    ["Version Control", "JIRA", "Trello"],
+                ],
+                [
+                    ["Visual Studio"],
+                ],
+            ],
+        },
+        {
+            category: "Creative & Technical Tools",
+            icon: "/svg/design.svg",
+            iconClass: "design-icon",
+            rows: [
+                [
+                    ["Figma", "Miro"],
+                    ["Blender", "Unity"],
+                ],
+                [
+                    ["Houdini", "Maya"],
+                    ["OpenFrameworks"],
+                ],
+                [
+                    ["Physically Based Rendering"],
+                ],
+                [
+                    ["Adobe Illustrator", "Photoshop", "After Effects"],
+                ],
+            ],
+        },
+        {
+            category: "UI / UX",
+            icon: "/svg/pallette.svg",
+            iconClass: "design-icon",
+            rows: [
+                [
+                    ["Wireframing", "Prototyping"],
+                    ["Usability Testing"],
+                ],
+                [
+                    ["Interaction Design", "Journey Mapping"],
+                ],
+                [
+                    ["Surveys", "A/B Testing"],
+                ],
+                [
+                    ["UI/UX for AR/VR Applications"],
+                ],
+            ],
+        },
+    ];
 
-        <div className="skill-stack">
-          <div className="stack-row collapse-row">
-            <div className="skill">
-              <p>Web Design</p>
-              <div className="skill-seperator"></div>
-              <p>Mobile Design</p>
-            </div>
-            <div className="skill">
-              <p>User experience</p>
-            </div>
-          </div>
 
-          <div className="stack-row">
-            <div className="skill">
-              <p>Brand design</p>
-            </div>
-            <div className="skill">
-              <p>Design system</p>
-            </div>
-            <div className="skill">
-              <p>User Research</p>
-            </div>
-          </div>
 
-          <div className="stack-row">
-            <div className="skill">
-              <p>Wireframing</p>
-              <div className="skill-seperator"></div>
-              <p>Prototyping</p>
-              <div className="skill-seperator"></div>
-              <p>Testing</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    return (
+        <section className="skills section-container">
+            <h2>Skills</h2>
 
-      <div class="skill-category">
-        <div className="skill-header">
-          <div className="icon-container development-icon">
-            <img src="/svg/code.svg" alt="" />
-          </div>
-          <h4>Development</h4>
-        </div>
+            {skillsData.map((category, index) => (
+                <div className="skill-category" key={index}>
+                    <div className="skill-header">
+                        <div className={`icon-container ${category.iconClass}`}>
+                            <img src={category.icon} alt="" />
+                        </div>
+                        <h4>{category.category}</h4>
+                    </div>
 
-        <div className="skill-stack">
-          <div className="stack-row collapse-row">
-            <div className="skill">
-              <p>React</p>
-              <div className="skill-seperator"></div>
-              <p>Redux</p>
-            </div>
-            <div className="skill">
-              <p>Github</p>
-            </div>
-          </div>
-
-          <div className="stack-row">
-            <div className="skill">
-              <p>HTML</p>
-              <div className="skill-seperator"></div>
-              <p>CSS</p>
-              <div className="skill-seperator"></div>
-              <p>JavaScript</p>
-            </div>
-          </div>
-
-          <div className="stack-row">
-            <div className="skill">
-              <p>Python</p>
-              <div className="skill-seperator"></div>
-              <p>Java</p>
-              <div className="skill-seperator"></div>
-              <p>C/C++</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+                    <div className="skill-stack">
+                        {category.rows.map((row, rowIndex) => (
+                            <div
+                                className={`stack-row ${row.length > 1 ? "collapse-row" : ""
+                                    }`}
+                                key={rowIndex}
+                            >
+                                {row.map((stack, stackIndex) => (
+                                    <div className="skill" key={stackIndex}>
+                                        {stack.map((item, itemIndex) => (
+                                            <React.Fragment key={itemIndex}>
+                                                <p>{item}</p>
+                                                {itemIndex !== stack.length - 1 && (
+                                                    <div className="skill-seperator"></div>
+                                                )}
+                                            </React.Fragment>
+                                        ))}
+                                    </div>
+                                ))}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            ))}
+        </section>
+    );
 }

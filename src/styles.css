@@ -80,6 +80,56 @@ body {
   font-family: "Satoshi", sans-serif;
   background-color: var(--background-color);
 }
+/*###################################################### NAVBAR STYLING ############################################*/
+
+.navbar-pill {
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    background: var(--background-color);
+    border: 1px solid var(--seperator-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 6.25rem; /* Matches your .dot and .icon-container radius */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+}
+
+/* Ensure navbar background is slightly transparent for the blur effect */
+[data-theme="dark"] .navbar-pill {
+    background: rgba(9, 9, 9, 0.8);
+}
+
+[data-theme="light"] .navbar-pill {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-bottom: 0 !important; /* Override your general li margin */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--secondary-text-color);
+    font-size: 1.25rem;
+    font-weight: 500;
+    transition: 0.3s;
+    text-transform: capitalize;
+}
+
+    .nav-link:hover {
+        color: var(--primary-text-color);
+    }
+
 
 .App {
   font-family: "Satoshi", sans-serif;
@@ -92,18 +142,19 @@ body {
   gap: 22.5rem;
   padding: 0 8rem;
   max-width: 74rem;
-  margin: 4rem auto;
+  margin: 3rem auto;
 }
 
 .hero {
-  font-family: Satoshi;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6rem;
-  align-self: stretch;
-  cursor: default;
+    font-family: Satoshi;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    align-self: stretch;
+    cursor: default;
+    color: var(--primary-text-color);
 }
 
 h1 {
@@ -211,7 +262,7 @@ li p {
 
 .darkmode-switch {
   position: absolute;
-  top: 2rem;
+  top: 1rem;
   right: 2rem;
 
   display: flex;
@@ -281,6 +332,7 @@ li p {
 
   cursor: pointer;
   transition: 0.4s;
+
 }
 
 .project:hover {
@@ -295,6 +347,14 @@ li p {
   }
   */
 }
+
+.latest-projects .content-container-horizontal {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 2rem;
+    width: 100%;
+}
+
 
 .project img {
   width: 20rem;
@@ -314,6 +374,8 @@ li p {
 .project-content p {
   text-align: left;
   color: var(--tertiary-text-color);
+  font-size: 1.2rem;
+  line-height: 2rem;
 }
 
 .content-container {
@@ -559,7 +621,7 @@ li p {
   text-align: center;
 }
 
-.footer .social i {
+.social i {
   cursor: pointer;
   margin: 2rem;
 }
@@ -649,6 +711,13 @@ li p {
     gap: 1.5rem;
   }
 
+
+.latest-projects .content-container-horizontal {
+   
+    grid-template-columns: repeat(3, 1fr); /* 4 items per row */
+    gap: 1.5rem;
+}
+
   .project {
     padding: 1.5rem;
     gap: 0.75rem;
@@ -659,6 +728,12 @@ li p {
     width: 15rem;
     height: 12rem;
   }
+
+
+    .project-content p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
 
   .timeline-item {
     gap: 0.5rem;
@@ -747,7 +822,7 @@ li p {
     font-size: 1.125rem;
   }
 
-  .footer .social i {
+  .social i {
     margin: 1.5rem;
     font-size: 3em;
   }
@@ -759,6 +834,27 @@ li p {
 }
 
 @media screen and (max-width: 768px) {
+
+
+.navbar-pill {
+    top: auto;
+    /*bottom: 2rem;*/ 
+    padding: 0.5rem 1rem;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    gap: 1rem;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.nav-link {
+    font-size: 1.25rem;
+}
+
   .App {
     gap: 6rem;
     padding: 4rem 0.5rem;
@@ -815,8 +911,8 @@ li p {
   }
 
   .darkmode-switch {
-    top: 0.25rem;
-    right: 0.25rem;
+    top: 4.25rem;
+    right: 1rem;
     scale: 0.75;
   }
 
@@ -836,6 +932,12 @@ li p {
     gap: 1rem;
   }
 
+
+  
+  .latest-projects .content-container-horizontal {
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 1rem;
+  }
   .project {
     padding: 1rem;
     gap: 0.5rem;
@@ -942,7 +1044,7 @@ li p {
     font-size: 0.75rem;
   }
 
-  .footer .social i {
+  .social i {
     margin: 1rem;
     font-size: 2.5em;
   }
@@ -957,5 +1059,25 @@ li p {
   .content-container-horizontal {
     flex-direction: column;
     gap: 1rem;
+  }
+
+  .darkmode-switch{
+      top: 3rem;
+  }
+
+  .navbar-pill {
+      top: auto;
+      /*bottom: 2rem;*/
+      padding: 0.25rem 0.5rem;
+      width: 95%;
+  }
+
+  .nav-list {
+      gap: 0.5rem;
+      width: 100%;
+      justify-content: space-around;
+  }
+  .nav-link {
+      font-size: 0.9rem;
   }
 }

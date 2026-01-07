@@ -1,12 +1,14 @@
 export default function Creator(){
     return (<section className="creator section-container">
-        <h2>Creator, Partner, Collaborator</h2>
+        <h2>Researcher, Builder, Collaborator</h2>
         <div className="content-container-vertical">
-        <p>I design wireframes, prototypes, and user interfaces that prioritize usability and aesthetics. My motto is to create something that looks good and performs brilliantly. Simple. </p>
+            <p>I <strong>architect</strong> intelligent systems from the ground up. By synthesizing SOTA Machine Learning research with robust software principles, I create the foundation for products that think and learn.</p>
+            <div className="seperator"><p>•</p><p>•</p><p>•</p></div>
+            <p>I bridge the gap between <strong>Computer Vision research</strong> and <strong>Software Engineering</strong>. My work focuses on building scalable AI solutions that solve real-world problems and deploying onto cloud or edge infrastructure without sacrificing speed or security.</p>
+            <div className="seperator"><p>•</p><p>•</p><p>•</p></div>
+            <p>I don't just build models; I build products. I integrate <strong>human-centered design</strong> principles into every AI application to ensure that the technology empowers the people using it.</p>
         <div className="seperator"><p>•</p><p>•</p><p>•</p></div>
-        <p>I have a strong command over HTML, CSS, and JavaScript, and frameworks like React JS, allowing me to build dynamic, interactive websites and web applications.</p>
-        <div className="seperator"><p>•</p><p>•</p><p>•</p></div>
-        <p>As a developer and designer, I can spearhead, support or polish products at any stage necessary. My strength lies in working closely with clients and cross-functional teams.</p>
+            <p>As a researcher and engineer, I can <strong>spearhead, support or polish</strong> products at any stage necessary. My strength lies in working closely with clients and cross-functional teams.</p>
         </div>
     </section>)
 }

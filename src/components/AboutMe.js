@@ -4,7 +4,7 @@ export default function AboutMe() {
       <h2>About me</h2>
       <p>
         {" "}
-        I'm a Machine Learning Student and UI/UX Engineer based in the vibrant
+        I'm a Machine Learning and UI/UX Engineer based in the vibrant
         city of Mountain View, California. I specialize in crafting
         user-friendly and visually appealing user experiences that bring ideas
         to life. I'm now focused on leveraging machine learning to develop

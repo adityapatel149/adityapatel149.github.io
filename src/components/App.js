@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 import "../styles.css";
+import Navbar from "./Navbar";
 import Hero from "./Hero";
 import AboutMe from "./AboutMe";
 import Creator from "./Creator";
@@ -42,7 +43,8 @@ export default function App() {
   }, []);
 
   return (
-    <main>
+      <main id="home">
+      <Navbar />
       <label className="darkmode-switch">
         <p>Dark Mode</p>
         <Switch
@@ -113,12 +115,12 @@ export default function App() {
       </label>
       <div className="App">
         <Hero />
-        <AboutMe />
-        <Creator />
-        <LatestProjects />
-        <WorkExperience />
-        <Education />
-        <Skills />
+              <div id="about"><AboutMe /></div>              
+              <div id="projects"><LatestProjects /></div>
+              <div id="experience"><WorkExperience /></div>
+              <Creator />
+              <div id="education"><Education /></div>
+              <div id="skills"><Skills /></div>
       </div>
       <Footer />
     </main>
