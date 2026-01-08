@@ -45,7 +45,7 @@ export default function App() {
   return (
       <main id="home">
           <Navbar />
-      <AbstractStroke />
+      
       <label className="darkmode-switch">
         <p>Dark Mode</p>
         <Switch
