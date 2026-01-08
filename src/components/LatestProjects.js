@@ -1,4 +1,4 @@
-﻿import React, { useState} from 'react';
+﻿import React, { useState, useEffect} from 'react';
 import onClickUrl from "../OnClickUrl";
 
 const projectsData = [
@@ -238,22 +238,46 @@ const projectsData = [
 ];
 
 export default function LatestProjects() {
-    const [showAll, setShowAll] = useState(false);
+    
+    const getMaxProjects = () => {
+        const width = window.innerWidth;
 
-    // Show top 12 if showAll is false, else show all
-    const displayedProjects = showAll ? projectsData : projectsData.slice(0, 12);
+        if (width >= 1400) return 12; // large desktop
+        if (width >= 800) return 8;   // tablet
+        return 6;                     // mobile
+    };
+
+    const [showAll, setShowAll] = useState(false);
+    const [maxProjects, setMaxProjects] = useState(getMaxProjects());
+
+
+    useEffect(() => {
+        const handleResize = () => {
+            setMaxProjects(getMaxProjects());
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    const displayedProjects = showAll
+        ? projectsData
+        : projectsData.slice(0, maxProjects);
 
     return (
         <section className="latest-projects section-container">
-            <div className="title-and-icon"> 
+            <div className="title-and-icon">
                 <h2>Latest Projects</h2>
                 <div className="social">
                     <i
-                        class="fa-brands fa-github fa-3x"
+                        className="fa-brands fa-github fa-3x"
                         onClick={onClickUrl("https://github.com/adityapatel149")}
-                    >↗</i>
-                    </div>
+                    >
+                        ↗
+                    </i>
+                </div>
             </div>
+
             <div className="content-container-horizontal">
                 {displayedProjects.map((project, index) => (
                     <div
@@ -261,7 +285,7 @@ export default function LatestProjects() {
                         className="project"
                         onClick={onClickUrl(project.url)}
                         role="button"
-                        tabIndex={0} // Accessibility
+                        tabIndex={0}
                     >
                         <img src={project.image} alt={`${project.title} thumbnail`} />
                         <div className="project-content">
@@ -276,15 +300,24 @@ export default function LatestProjects() {
                 ))}
             </div>
 
-            {projectsData.length > 12 && (
+            {!showAll && projectsData.length > maxProjects && (
                 <div className="see-all-container">
-                    <button className="primary-button" onClick={() => setShowAll(!showAll)}>
+                    <button className="primary-button" onClick={() => setShowAll(true)}>
                         <div className="btn-inside">
-                            <div className="btn-inside2">{showAll ? "Show Less" : "See All"}</div>
+                            <div className="btn-inside2">See All</div>
                         </div>
                     </button>
                 </div>
-                
+            )}
+
+            {showAll && (
+                <div className="see-all-container">
+                    <button className="primary-button" onClick={() => setShowAll(false)}>
+                        <div className="btn-inside">
+                            <div className="btn-inside2">Show Less</div>
+                        </div>
+                    </button>
+                </div>
             )}
         </section>
     );
