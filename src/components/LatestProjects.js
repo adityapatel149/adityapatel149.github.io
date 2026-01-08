@@ -268,7 +268,7 @@ export default function LatestProjects() {
                             <h4>{project.title}</h4>
                             <ul>
                                 {project.points.map((point, idx) => (
-                                    <li key={idx}>{point}</li>
+                                    <p key={idx}>{point}</p>
                                 ))}
                             </ul>
                         </div>
