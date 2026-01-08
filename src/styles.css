@@ -130,6 +130,17 @@ body {
         color: var(--primary-text-color);
     }
 
+.abstract-stroke {
+    position: fixed;
+    top: 0;
+    left: -15vw; /* anchor on right side */
+    width: 60vw;
+    height: 200vh;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.75;
+    will-change: transform; /* optimize animation */
+}
 
 .App {
   font-family: "Satoshi", sans-serif;

@@ -43,7 +43,7 @@ const projectsData = [
         title: "VLM-Enhanced Multimodal RAG",
         subtitle: "Chat with PDF (Text, Images, Graphs)",
         date: "Jan 2025",
-        url: "#", // Add Github link here
+        url: "https://github.com/adityapatel149/chat-with-pdf", // Add Github link here
         image: "/images/rag-chat.png",
         points: [
             "Designed a multimodal RAG pipeline using LangChain, Chromadb, and Unstructured. ",
@@ -55,7 +55,7 @@ const projectsData = [
     title: "Simulating SLAM from scratch",
     subtitle: "Python-based Robotics Simulation",
     date: "Mar 2025",
-    url: "https://github.com/adityapatel149/chat-with-pdf", // Add Github link here
+      url: "https://github.com/adityapatel149/Simulating-LIDAR-from-floor-map", // Add Github link here
     image: "/images/slam-sim.png",
     points: [
       "Designed and developed a simple 2D SLAM by simulating and generating 2D LiDAR data from floor maps. ",
@@ -66,7 +66,7 @@ const projectsData = [
     title: "Crowd and Flock Simulation",
     subtitle: "C++ & OpenFrameworks Graphics",
     date: "Feb 2025",
-    url: "#",
+    url: "https://github.com/adityapatel149/flocking", // Add Github link here
     image: "/images/flock-sim.png",
     points: [
       "Developed a 3D flock simulation utilizing physically based particle simulations in C++. ",

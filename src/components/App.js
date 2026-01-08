@@ -11,7 +11,7 @@ import Education from "./Education";
 import Skills from "./Skills";
 import Footer from "./Footer";
 import Switch from "react-switch";
-
+import AbstractStroke from "./AbstractStroke";
 export default function App() {
   const isBrowserDefaultDark = () =>
     window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -44,7 +44,8 @@ export default function App() {
 
   return (
       <main id="home">
-      <Navbar />
+          <Navbar />
+      <AbstractStroke />
       <label className="darkmode-switch">
         <p>Dark Mode</p>
         <Switch

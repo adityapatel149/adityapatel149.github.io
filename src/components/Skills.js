@@ -37,7 +37,7 @@ export default function Skills() {
         },
         {
             category: "Cloud & DevOps",
-            icon: "/svg/cloud.svg",
+            icon: "/svg/code.svg",
             iconClass: "development-icon",
             rows: [
                 [
@@ -55,7 +55,7 @@ export default function Skills() {
         },
         {
             category: "Tools & Methodologies",
-            icon: "/svg/tools.svg",
+            icon: "/svg/code.svg",
             iconClass: "design-icon",
             rows: [
                 [
@@ -75,7 +75,7 @@ export default function Skills() {
         },
         {
             category: "Creative & Technical Tools",
-            icon: "/svg/design.svg",
+            icon: "/svg/pallette.svg",
             iconClass: "design-icon",
             rows: [
                 [
