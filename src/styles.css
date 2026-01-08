@@ -359,12 +359,17 @@ li p {
   */
 }
 
+
+.latest-projects {
+    color: var(--primary-text-color);
+}
 .latest-projects .content-container-horizontal {
     display: grid;
     grid-template-columns: repeat( 4, 1fr );
     gap: 2rem;
     width: 100%;
     justify-items: center;
+
 }
 
 
@@ -401,6 +406,12 @@ li p {
   flex-direction: column;
   align-items: center;
   align-self: stretch;
+}
+
+
+
+.work-experience {
+    color: var(--primary-text-color);
 }
 
 .timeline-item {
