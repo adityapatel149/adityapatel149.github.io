@@ -1,4 +1,4 @@
-import onClickUrl from "../OnClickUrl";
+﻿import onClickUrl from "../OnClickUrl";
 
 
 export default function Hero() {
@@ -19,15 +19,15 @@ export default function Hero() {
               <i
                   class="fa-brands fa-github fa-3x"
                   onClick={onClickUrl("https://github.com/adityapatel149")}
-              ></i>
+              >↗</i>
               <i
                   class="fa-brands fa-linkedin fa-3x"
                   onClick={onClickUrl("https://linkedin.com/in/adityapatel149")}
-              ></i>
+              >↗</i>
               <i
                   class="fa-brands fa-dribbble fa-3x"
                   onClick={onClickUrl("https://dribbble.com/AdityaPatel149")}
-              ></i>
+              >↗</i>
           </div>
       <button className="primary-button" onClick={sendEmail}>
         <div className="btn-inside">

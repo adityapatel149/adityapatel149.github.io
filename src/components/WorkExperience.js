@@ -1,5 +1,5 @@
-import React from 'react';
-
+﻿import React from 'react';
+import onClickUrl from '../OnClickUrl'
 const experiences = [
     {
         date: "Sep 2025 - Nov 2025",
@@ -78,7 +78,15 @@ const TimelineDot = () => (
 export default function WorkExperience() {
     return (
         <section className="work-experience section-container">
-            <h2>Work Experience</h2>
+            <div className="title-and-icon">
+                <h2>Work Experience</h2>
+                <div className="social">
+                    <i
+                        class="fa-brands fa-linkedin fa-3x"
+                        onClick={onClickUrl("https://linkedin.com/in/adityapatel149")}
+                    >↗</i>
+                </div>
+            </div>
             <div className="content-container">
                 {experiences.map((item, index) => (
                     <div key={index} className="timeline-item">

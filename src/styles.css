@@ -366,12 +366,17 @@ li p {
     width: 100%;
 }
 
+.title-and-icon{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
 
 .project img {
-  width: 20rem;
-  height: 15rem;
-  border-radius: 0.5rem;
-  object-fit: cover;
+    width: 20rem;
+    height: 15rem;
+    border-radius: 0.5rem;
+    object-fit: cover;
 }
 
 .project-content {
