@@ -140,7 +140,7 @@ const projectsData = [
         subtitle: "Physics Simulation in 3D",
         date: "2025",
         url: "https://github.com/adityapatel149/3d-ball-bouncing-simulation",
-        image: "/images/ball-sim.png",
+        image: "/images/meta.png",
         points: [
             "Simulated 3D physics of bouncing balls with collision detection and response. "
         ]
@@ -150,7 +150,7 @@ const projectsData = [
         subtitle: "React Blog App with Redux",
         date: "2024",
         url: "https://github.com/adityapatel149/blogs-redux",
-        image: "/images/blogs-redux.png",
+        image: "/images/meta.png",
         points: [
             "Developed a scalable React blog app with Redux for state management. "
         ]
@@ -160,7 +160,7 @@ const projectsData = [
         subtitle: "Hidden Markov Model Implementation",
         date: "2024",
         url: "https://github.com/adityapatel149/Gradient-based-HMM",
-        image: "/images/hmm.png",
+        image: "/images/meta.png",
         points: [
             "Implemented gradient-based Hidden Markov Models for sequence prediction tasks. "
         ]
@@ -170,7 +170,7 @@ const projectsData = [
         subtitle: "CNN-based Binary Classification",
         date: "2024",
         url: "https://github.com/adityapatel149/binary-classifier-CNN",
-        image: "/images/binary-cnn.png",
+        image: "/images/meta.png",
         points: [
             "Trained CNNs for binary image classification with data augmentation and optimization. "
         ]
@@ -180,7 +180,7 @@ const projectsData = [
         subtitle: "Cipher Decryption with HMM",
         date: "2024",
         url: "https://github.com/adityapatel149/caesar-cipher-HMM",
-        image: "/images/caesar-hmm.png",
+        image: "/images/meta.png",
         points: [
             "Decrypted Caesar ciphered text using Hidden Markov Model approaches. "
         ]
@@ -190,7 +190,7 @@ const projectsData = [
         subtitle: "Physics-based Game",
         date: "2023",
         url: "https://github.com/adityapatel149/AstroSling",
-        image: "/images/astrosling.png",
+        image: "/images/meta.png",
         points: [
             "Created a physics-based game using 2D projectile mechanics and interactive graphics. "
         ]
@@ -200,7 +200,7 @@ const projectsData = [
         subtitle: "Inventory & Sales Management App",
         date: "2023",
         url: "https://github.com/adityapatel149/Enhanced-Product-Sales-Manager",
-        image: "/images/sales-manager.png",
+        image: "/images/meta.png",
         points: [
             "Developed a full-stack sales and inventory management app with analytics dashboard. "
         ]
@@ -210,7 +210,7 @@ const projectsData = [
         subtitle: "Image Search Engine",
         date: "2023",
         url: "https://github.com/adityapatel149/imagesearcher",
-        image: "/images/image-searcher.png",
+        image: "/images/meta.png",
         points: [
             "Implemented a search engine for images with filtering and ranking functionalities. "
         ]
@@ -220,7 +220,7 @@ const projectsData = [
         subtitle: "React YouTube Clone",
         date: "2023",
         url: "https://github.com/adityapatel149/youtube-app",
-        image: "/images/youtube-app.png",
+        image: "/images/meta.png",
         points: [
             "Built a React-based YouTube clone with video playback and subscription features. "
         ]
@@ -230,7 +230,7 @@ const projectsData = [
         subtitle: "Classic Connect 4 Game",
         date: "2023",
         url: "https://github.com/adityapatel149/connect4",
-        image: "/images/connect4.png",
+        image: "/images/meta.png",
         points: [
             "Developed a fully playable Connect 4 game with AI opponent. "
         ]
