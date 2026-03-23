@@ -3,6 +3,18 @@ import onClickUrl from "../OnClickUrl";
 
 const projectsData = [
     {
+        title: "Pedestrian Action Prediction",
+        subtitle: "",
+        date: "Feb 2026",
+        url: "https://github.com/adityapatel149/pedestrian-action-anticipation-vjepa",
+        image: "/images/pedestrian.png",
+        points: [
+            "Fine-tuned a probe on a foundation world model to predict pedestrian actions up to 3 seconds ahead from partial video observations without additional sensor modalities.",
+            "Real-time inference pipeline for low-latency prediction on streaming video with multi-object tracking.",
+            "Achieved 86% accuracy, competitive with multimodal SOTA methods.",
+        ]
+    },
+    {
         title: "Theia Sense",
         subtitle: "Personalized Image Curation Based on Aesthetics",
         date: "July 2025",
