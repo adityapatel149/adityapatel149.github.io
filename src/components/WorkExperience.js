@@ -2,6 +2,18 @@
 import onClickUrl from '../OnClickUrl'
 const experiences = [
     {
+    date: "Apr 2026 - Present",
+        location: "San Jose, CA",
+        role: "Computer Vision Engineer",
+        company: "Spartan Flight, SJSU UAS Team",
+        logo: "/images/spartanflight.jpg",
+        points: [
+          "Developed and deployed real-time object detection and tracking pipelines for small objects on UAVs using Python, OpenCV, and deep learning, improving detection accuracy by 28% and reducing inference latency by 35%.",
+          "Optimized models for edge deployment on NVIDIA Jetson (TensorRT, CUDA), achieving 30+ FPS real-time inference with 40% faster processing under resource constraints.",
+          "Built a photogrammetry pipeline (feature extraction, matching, image registration, stitching, mapping) to generate high-resolution aerial maps, improving mapping accuracy by 40% and mission efficiency by 25%."
+        ]
+    },
+    {
         date: "Sep 2025 - Nov 2025",
         location: "San Jose, CA",
         role: "Instructional Student Assistant",
