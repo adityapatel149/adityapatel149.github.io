@@ -3,16 +3,28 @@ import onClickUrl from "../OnClickUrl";
 
 const projectsData = [
     {
-        title: "Pedestrian Action Prediction",
-        subtitle: "",
-        date: "Feb 2026",
-        url: "https://github.com/adityapatel149/pedestrian-action-anticipation-vjepa",
-        image: "/images/pedestrian.png",
-        points: [
-            "Fine-tuned a probe on a foundation world model to predict pedestrian actions up to 3 seconds ahead from partial video observations without additional sensor modalities.",
-            "Real-time inference pipeline for low-latency prediction on streaming video with multi-object tracking.",
-            "Achieved 86% accuracy, competitive with multimodal SOTA methods.",
-        ]
+          title: "Pedestrian Action Prediction",
+          subtitle: "",
+          date: "Feb 2026",
+          url: "https://github.com/adityapatel149/pedestrian-action-anticipation-vjepa",
+          image: "/images/pedestrian.png",
+          points: [
+              "Fine-tuned a probe on a foundation world model to predict pedestrian actions up to 3 seconds ahead from partial video observations without additional sensor modalities.",
+              "Real-time inference pipeline for low-latency prediction on streaming video with multi-object tracking.",
+              "Achieved 86% accuracy, competitive with multimodal SOTA methods.",
+          ]
+    },
+    {
+      title: "RGB-LiDAR-IMU Sensor Fusion",
+      subtitle: "3D Reconstruction, Pose Estimation & Dynamic Object Removal",
+      date: "May 2026",
+      url: "https://github.com/adityapatel149/rgb-lidar-imu-3d-reconstruction",
+      image: "/images/sensorfusion.png",
+      points: [
+        "Multimodal perception pipeline using CARLA simulation data for synchronized multicamera RGB, LiDAR, and IMU sensor fusion.",
+        "Implemented LiDAR-Inertial Odometry and a 15-state ESKF.",
+        "Generated RGB-colored static-world 3D reconstructions with dynamic object removal, reducing ghost trails.",
+      ]
     },
     {
         title: "Theia Sense",
